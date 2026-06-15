@@ -50,6 +50,14 @@
             transform: translateY(-5px);
             box-shadow: 0 8px 24px rgba(0,0,0,0.08) !important;
         }
+        .social-link {
+            font-size: 1.5rem;
+            color: #adb5bd;
+            transition: color 0.3s ease;
+        }
+        .social-link:hover {
+            color: #fff;
+        }
     </style>
 </head>
 <body>
@@ -138,10 +146,14 @@
         </section>
     </main>
 
-    <!-- Footer -->
+    <!-- Footer con Redes Sociales -->
     <footer class="bg-dark text-white py-4 text-center">
         <div class="container">
-            <p class="mb-0">&copy; 2026 Dident Texcoco. Todos los derechos reservados.</p>
+            <div class="mb-3">
+                <a href="https://www.facebook.com/share/199etbwt7L/" target="_blank" class="mx-3 social-link" aria-label="Facebook de Dident"><i class="bi bi-facebook"></i></a>
+                <a href="https://www.instagram.com/dident.texcoco?igsh=MTg5OXNtbWFsaG43ZA==" target="_blank" class="mx-3 social-link" aria-label="Instagram de Dident"><i class="bi bi-instagram"></i></a>
+            </div>
+            <p class="mb-0 text-secondary" style="font-size: 0.9rem;">&copy; 2026 Dident Texcoco. Todos los derechos reservados.</p>
         </div>
     </footer>
 
