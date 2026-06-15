@@ -4,102 +4,141 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Dident Texcoco | Consultorio Dental</title>
+    
+    <!-- Meta etiquetas para SEO y Compartir en Redes/WhatsApp -->
+    <meta name="description" content="Cuidado dental integral y profesional en Texcoco. Agenda tu cita hoy mismo.">
+    <meta property="og:title" content="Dident Texcoco | Consultorio Dental">
+    <meta property="og:description" content="Tu sonrisa en las mejores manos. Odontología general, estética y ortodoncia.">
+    <meta property="og:image" content="https://images.unsplash.com/photo-1629909613654-28e377c37b09?q=80&w=2070">
+    <meta property="og:url" content="https://dident.mx">
+
+    <!-- Bootstrap & Icons -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.0/font/bootstrap-icons.css">
+    
     <style>
+        html {
+            scroll-behavior: smooth;
+        }
         .hero-section {
-            background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('https://images.unsplash.com/photo-1629909613654-28e377c37b09?q=80&w=2070') no-repeat center center/cover;
+            background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.6)), url('https://images.unsplash.com/photo-1629909613654-28e377c37b09?q=80&w=2070') no-repeat center center/cover;
             color: white;
-            padding: 120px 0;
+            padding: 140px 0;
         }
         .btn-whatsapp {
             background-color: #25D366;
             color: white;
+            transition: all 0.3s ease;
         }
         .btn-whatsapp:hover {
             background-color: #128C7E;
             color: white;
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(37, 211, 102, 0.3);
+        }
+        .btn-primary {
+            transition: all 0.3s ease;
+        }
+        .btn-primary:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(13, 110, 253, 0.3);
+        }
+        .card-service {
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        .card-service:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 24px rgba(0,0,0,0.08) !important;
         }
     </style>
 </head>
 <body>
 
+    <!-- Navegación -->
     <nav class="navbar navbar-expand-lg navbar-light bg-white shadow-sm sticky-top">
         <div class="container">
-            <a class="navbar-brand fw-bold text-primary" href="#">Dident Texcoco</a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+            <a class="navbar-brand fw-bold text-primary" href="#inicio">Dident Texcoco</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
             <div class="collapse navbar-collapse" id="navbarNav">
-                <ul class="navbar-nav ms-auto">
+                <ul class="navbar-nav ms-auto align-items-center">
                     <li class="nav-item"><a class="nav-link" href="#inicio">Inicio</a></li>
                     <li class="nav-item"><a class="nav-link" href="#servicios">Servicios</a></li>
                     <li class="nav-item"><a class="nav-link" href="#ubicacion">Ubicación</a></li>
-                    <li class="nav-item"><a class="btn btn-primary text-white ms-2" href="https://wa.me/5215500000000?text=Hola,%20me%20gustaría%20agendar%20una%20cita%20en%20Dident" target="_blank">Agendar Cita</a></li>
+                    <li class="nav-item ms-lg-2 mt-2 mt-lg-0">
+                        <a class="btn btn-primary text-white" href="https://wa.me/525561961697?text=Hola%2C%20me%20gustar%C3%ADa%20agendar%20una%20cita" target="_blank">Agendar Cita</a>
+                    </li>
                 </ul>
             </div>
         </div>
     </nav>
 
-    <header id="inicio" class="hero-section text-center">
-        <div class="container">
-            <h1 class="display-4 fw-bold mb-3">Tu sonrisa en las mejores manos</h1>
-            <p class="lead mb-4">Cuidado dental integral y profesional en Texcoco. Volverás a sonreír con confianza.</p>
-            <a href="https://wa.me/5215500000000?text=Hola,%20me%20gustaría%20agendar%20una%20cita%20en%20Dident" target="_blank" class="btn btn-whatsapp btn-lg px-4 shadow">
-                <i class="bi bi-whatsapp me-2"></i>Contáctanos por WhatsApp
-            </a>
-        </div>
-    </header>
+    <main>
+        <!-- Hero Section -->
+        <header id="inicio" class="hero-section text-center">
+            <div class="container">
+                <h1 class="display-4 fw-bold mb-3">Tu sonrisa en las mejores manos</h1>
+                <p class="lead mb-4 fs-4">Cuidado dental integral y profesional en Texcoco. Volverás a sonreír con confianza.</p>
+                <a href="https://wa.me/525561961697?text=Hola%2C%20me%20gustar%C3%ADa%20agendar%20una%20cita" target="_blank" class="btn btn-whatsapp btn-lg px-4 py-3 shadow fw-bold">
+                    <i class="bi bi-whatsapp me-2"></i>Contáctanos por WhatsApp
+                </a>
+            </div>
+        </header>
 
-    <section id="servicios" class="py-5 bg-light">
-        <div class="container text-center">
-            <h2 class="fw-bold mb-5">Nuestros Servicios</h2>
-            <div class="row g-4">
-                <div class="col-md-4">
-                    <div class="card h-100 border-0 shadow-sm p-4">
-                        <div class="text-primary mb-3"><i class="bi bi-shield-plus display-5"></i></div>
-                        <h5 class="card-title fw-bold">Odontología General</h5>
-                        <p class="card-text text-muted">Limpiezas, resinas y prevención para mantener tu boca completamente sana.</p>
+        <!-- Servicios -->
+        <section id="servicios" class="py-5 bg-light">
+            <div class="container text-center py-3">
+                <h2 class="fw-bold mb-5">Nuestros Servicios</h2>
+                <div class="row g-4">
+                    <div class="col-md-4">
+                        <div class="card h-100 border-0 shadow-sm p-4 card-service">
+                            <div class="text-primary mb-3"><i class="bi bi-shield-plus display-5"></i></div>
+                            <h3 class="h5 card-title fw-bold">Odontología General</h3>
+                            <p class="card-text text-muted">Limpiezas, resinas y prevención para mantener tu boca completamente sana.</p>
+                        </div>
                     </div>
-                </div>
-                <div class="col-md-4">
-                    <div class="card h-100 border-0 shadow-sm p-4">
-                        <div class="text-primary mb-3"><i class="bi bi-stars display-5"></i></div>
-                        <h5 class="card-title fw-bold">Estética Dental</h5>
-                        <p class="card-text text-muted">Diseño de sonrisa, blanqueamientos y carillas para lucir espectacular.</p>
+                    <div class="col-md-4">
+                        <div class="card h-100 border-0 shadow-sm p-4 card-service">
+                            <div class="text-primary mb-3"><i class="bi bi-stars display-5"></i></div>
+                            <h3 class="h5 card-title fw-bold">Estética Dental</h3>
+                            <p class="card-text text-muted">Diseño de sonrisa, blanqueamientos y carillas para lucir espectacular.</p>
+                        </div>
                     </div>
-                </div>
-                <div class="col-md-4">
-                    <div class="card h-100 border-0 shadow-sm p-4">
-                        <div class="text-primary mb-3"><i class="bi bi-activity display-5"></i></div>
-                        <h5 class="card-title fw-bold">Ortodoncia</h5>
-                        <p class="card-text text-muted">Alinea tus dientes con brackets tradicionales o sistemas estéticos avanzados.</p>
+                    <div class="col-md-4">
+                        <div class="card h-100 border-0 shadow-sm p-4 card-service">
+                            <div class="text-primary mb-3"><i class="bi bi-activity display-5"></i></div>
+                            <h3 class="h5 card-title fw-bold">Ortodoncia</h3>
+                            <p class="card-text text-muted">Alinea tus dientes con brackets tradicionales o sistemas estéticos avanzados.</p>
+                        </div>
                     </div>
                 </div>
             </div>
-        </div>
-    </section>
+        </section>
 
-    <section id="ubicacion" class="py-5">
-        <div class="container">
-            <div class="row align-items-center g-5">
-                <div class="col-md-6">
-                    <h2 class="fw-bold mb-4">¿Dónde encontrarnos?</h2>
-                    <p class="text-muted"><i class="bi bi-geo-alt-fill text-primary me-2"></i> Texcoco, Estado de México, Centro.</p>
-                    <p class="text-muted"><i class="bi bi-clock-fill text-primary me-2"></i> <strong>Horarios:</strong> Lunes a Sábado: 10:00 AM - 7:00 PM</p>
-                    <hr>
-                    <h5 class="fw-bold text-secondary">¿Tienes una emergencia dental?</h5>
-                    <p class="text-muted">Escríbenos directamente para darte prioridad de atención.</p>
-                </div>
-                <div class="col-md-6">
-                    <div class="ratio ratio-16x9 shadow rounded overflow-hidden">
-                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d15046.852924967396!2d-98.887961!3d19.510903!2m3!1f0!2f0!3f0!3m2!1i1026!2i768!4f13.1!3m3!1m2!1s0x85d1e6ff7020050d%3A0x6bba847cbb6504a7!2sTexcoco%2C%20M%C3%A9x.!5e0!3m2!1ses-419!2smx!4v1700000000000!5m2!1ses-419!2smx" allowfullscreen="" loading="lazy"></iframe>
+        <!-- Ubicación -->
+        <section id="ubicacion" class="py-5">
+            <div class="container py-3">
+                <div class="row align-items-center g-5">
+                    <div class="col-md-6">
+                        <h2 class="fw-bold mb-4">¿Dónde encontrarnos?</h2>
+                        <p class="text-muted fs-5"><i class="bi bi-geo-alt-fill text-primary me-2"></i> Texcoco, Estado de México, Centro.</p>
+                        <p class="text-muted fs-5"><i class="bi bi-clock-fill text-primary me-2"></i> <strong>Horarios:</strong> Lunes a Sábado: 10:00 AM - 7:00 PM</p>
+                        <hr class="my-4">
+                        <h4 class="fw-bold text-secondary h5">¿Tienes una emergencia dental?</h4>
+                        <p class="text-muted">Escríbenos directamente para darte prioridad de atención rápida.</p>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="ratio ratio-16x9 shadow rounded overflow-hidden">
+                            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d15046.852924967396!2d-98.887961!3d19.510903!2m3!1f0!2f0!3f0!3m2!1i1026!2i768!4f13.1!3m3!1m2!1s0x85d1e6ff7020050d%3A0x6bba847cbb6504a7!2sTexcoco%2C%20M%C3%A9x.!5e0!3m2!1ses-419!2smx!4v1700000000000!5m2!1ses-419!2smx" allowfullscreen="" loading="lazy" title="Mapa de ubicación Dident Texcoco"></iframe>
+                        </div>
                     </div>
                 </div>
             </div>
-        </div>
-    </section>
+        </section>
+    </main>
 
+    <!-- Footer -->
     <footer class="bg-dark text-white py-4 text-center">
         <div class="container">
             <p class="mb-0">&copy; 2026 Dident Texcoco. Todos los derechos reservados.</p>
