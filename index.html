@@ -75,24 +75,19 @@
             }
         }
 
-        /* Estilos del Carrusel de Publicidad */
+        /* Estilos del Carrusel de Publicidad Híbrido */
         .carousel-custom {
             max-width: 100%;
             margin: 0 auto;
-            background-color: #000;
+            background-color: var(--fondo-principal);
         }
         .carousel-item img {
             width: 100%;
             height: auto;
-            max-height: 480px; /* Altura máxima ideal para banners en Desktop */
-            object-fit: cover;
+            display: block;
+            object-fit: contain; /* Ajusta la imagen completa sin recortar absolutamente nada */
         }
-        @media (max-width: 768px) {
-            .carousel-item img {
-                max-height: 280px; /* Altura adaptada para pantallas móviles */
-            }
-        }
-
+        
         /* Hero Section */
         .hero-section {
             background: linear-gradient(rgba(4, 60, 103, 0.6), rgba(4, 60, 103, 0.75)), url('https://images.unsplash.com/photo-1629909613654-28e377c37b09?q=80&w=2070') no-repeat center center/cover;
@@ -198,7 +193,7 @@
         </div>
     </nav>
 
-    <!-- Carrusel Publicitario Dinámico Adaptado a tus 6 Archivos de la Carpeta Publicidad -->
+    <!-- Carrusel Publicitario Híbrido Inteligente (Detecta PC y Celular) -->
     <div id="carouselPublicidad" class="carousel slide carousel-custom shadow-sm" data-bs-ride="carousel">
         <div class="carousel-indicators">
             <button type="button" data-bs-target="#carouselPublicidad" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
@@ -209,23 +204,47 @@
             <button type="button" data-bs-target="#carouselPublicidad" data-bs-slide-to="5" aria-label="Slide 6"></button>
         </div>
         <div class="carousel-inner">
+            <!-- Promo 1 -->
             <div class="carousel-item active" data-bs-interval="4000">
-                <img src="./Publicidad/promo1.png" alt="Promoción Dident 1">
+                <picture>
+                    <source media="(max-width: 767px)" srcset="./Publicidad/promo1.png">
+                    <img src="./Publicidad/promopc1.png" alt="Promoción Dident 1">
+                </picture>
             </div>
+            <!-- Promo 2 -->
             <div class="carousel-item" data-bs-interval="4000">
-                <img src="./Publicidad/promo2.png" alt="Promoción Dident 2">
+                <picture>
+                    <source media="(max-width: 767px)" srcset="./Publicidad/promo2.png">
+                    <img src="./Publicidad/promopc2.png" alt="Promoción Dident 2">
+                </picture>
             </div>
+            <!-- Promo 3 -->
             <div class="carousel-item" data-bs-interval="4000">
-                <img src="./Publicidad/promo3.png" alt="Promoción Dident 3">
+                <picture>
+                    <source media="(max-width: 767px)" srcset="./Publicidad/promo3.png">
+                    <img src="./Publicidad/promopc3.png" alt="Promoción Dident 3">
+                </picture>
             </div>
+            <!-- Promo 4 -->
             <div class="carousel-item" data-bs-interval="4000">
-                <img src="./Publicidad/promo4.png" alt="Promoción Dident 4">
+                <picture>
+                    <source media="(max-width: 767px)" srcset="./Publicidad/promo4.png">
+                    <img src="./Publicidad/promopc4.png" alt="Promoción Dident 4">
+                </picture>
             </div>
+            <!-- Promo 5 -->
             <div class="carousel-item" data-bs-interval="4000">
-                <img src="./Publicidad/promo5.jpg" alt="Promoción Dident 5">
+                <picture>
+                    <source media="(max-width: 767px)" srcset="./Publicidad/promo5.png">
+                    <img src="./Publicidad/promopc5.png" alt="Promoción Dident 5">
+                </picture>
             </div>
+            <!-- Promo 6 -->
             <div class="carousel-item" data-bs-interval="4000">
-                <img src="./Publicidad/promo6.png" alt="Promoción Dident 6">
+                <picture>
+                    <source media="(max-width: 767px)" srcset="./Publicidad/promo6.png">
+                    <img src="./Publicidad/promopc6.png" alt="Promoción Dident 6">
+                </picture>
             </div>
         </div>
         <button class="carousel-control-prev" type="button" data-bs-target="#carouselPublicidad" data-bs-slide="prev">
