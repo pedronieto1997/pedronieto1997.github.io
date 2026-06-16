@@ -39,11 +39,13 @@
             background-color: var(--fondo-principal);
         }
 
-        /* Modificación de la barra superior a Azul Océano Profundo */
+        /* Ajuste simétrico del banner superior (Navbar) */
         .navbar-custom {
             background-color: var(--azul-oceano) !important;
-            padding-top: 5px;
-            padding-bottom: 5px;
+            padding-top: 15px;   /* Espacio superior simétrico */
+            padding-bottom: 15px; /* Espacio inferior simétrico */
+            display: flex;
+            align-items: center;
         }
 
         /* Enlaces de navegación con el Azul Claro de Apoyo */
@@ -56,19 +58,21 @@
             color: #ffffff !important;
         }
 
-        /* Ajuste y escalado masivo del Logo de la Empresa */
+        /* Contenedor y dimensiones limpias para el Logo de la Empresa */
+        .navbar-brand-container {
+            display: flex;
+            align-items: center;
+            height: 95px; /* Mantiene el tamaño grande que te gustó */
+        }
+
         .navbar-logo {
-            height: 95px; /* Escalado a tamaño grande e imponente */
+            height: 100%;
             width: auto;
             object-fit: contain;
-            margin-bottom: -15px; /* Truco de TI para sobresalir elegantemente de la barra */
-            margin-top: -10px;
             transition: transform 0.3s ease;
-            position: relative;
-            z-index: 1020;
         }
         .navbar-logo:hover {
-            transform: scale(1.03);
+            transform: scale(1.02);
         }
 
         /* Hero Section usando el Azul Océano para el degradado */
@@ -142,11 +146,11 @@
 </head>
 <body>
 
-    <!-- Navegación con Fondo Azul Océano Fijo -->
+    <!-- Navegación con Espaciado Simétrico Corregido -->
     <nav class="navbar navbar-expand-lg navbar-custom shadow sticky-top">
         <div class="container">
-            <a class="navbar-brand py-0" href="#inicio">
-                <!-- Logotipo Principal expandido e integrado -->
+            <a class="navbar-brand py-0 navbar-brand-container" href="#inicio">
+                <!-- El logo se alinea al 100% del alto del contenedor sin márgenes negativos -->
                 <img src="./Logo_principal.png" alt="Dident Clinica Dental" class="navbar-logo">
             </a>
             <button class="navbar-toggler navbar-toggler-custom" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
@@ -188,7 +192,7 @@
                         <div class="card h-100 border-0 shadow-sm p-4 card-service">
                             <div class="mb-3 icon-azul"><i class="bi bi-shield-plus display-5"></i></div>
                             <h3 class="h5 card-title fw-bold" style="color: var(--azul-oceano);">Odontología General</h3>
-                            <p class="card-text text-muted">Limpiezas profundas, resinas estéticas y tratamientos de prevención para mantener tu boca completamente sana.</p>
+                            <p class="card-text text-muted">Limpiezas profundas, resinas estéticas y tratamientos de prevención para mantener tu mouth completamente sana.</p>
                         </div>
                     </div>
                     <!-- 2. Estética Dental -->
