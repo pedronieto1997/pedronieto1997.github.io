@@ -13,7 +13,7 @@
     <meta name="description" content="Cuidado dental integral y profesional en Texcoco. Agenda tu cita hoy mismo con la Dra. Diana López.">
     <meta property="og:title" content="Dident Texcoco | Consultorio Dental">
     <meta property="og:description" content="Tu sonrisa en las mejores manos. Odontología general, estética y ortodoncia con la Dra. Diana López.">
-    <meta property="og:image" content="https://www.dident.mx/Logo_dident.png">
+    <meta property="og:image" content="https://www.dident.mx/Logo_principal.png">
     <meta property="og:image:type" content="image/png">
     <meta property="og:url" content="https://www.dident.mx">
 
@@ -72,17 +72,12 @@
             color: #0d6efd;
         }
         
-        /* Contenedor circular blanco para el logotipo en la barra de navegación */
-        .logo-container-nav {
-            background-color: #ffffff;
-            border-radius: 50%;
-            padding: 4px;
-            display: inline-flex;
-            align-items: center;
-            justify-content: center;
-            box-shadow: 0 2px 6px rgba(0,0,0,0.1);
-            width: 36px;
-            height: 36px;
+        /* Estilo para ajustar el Logo Principal de la Empresa en la Navbar */
+        .navbar-logo {
+            height: 45px;
+            width: auto;
+            object-fit: contain;
+            filter: drop-shadow(0px 1px 2px rgba(0,0,0,0.1));
         }
     </style>
 </head>
@@ -91,12 +86,9 @@
     <!-- Navegación -->
     <nav class="navbar navbar-expand-lg navbar-light bg-white shadow-sm sticky-top">
         <div class="container">
-            <a class="navbar-brand fw-bold text-primary d-flex align-items-center" href="#inicio">
-                <!-- Logotipo dentro de su círculo blanco protector -->
-                <div class="logo-container-nav me-2">
-                    <img src="./Logo_dident.png" alt="Logo Dident" width="24" height="24" style="object-fit: contain;">
-                </div>
-                Dident Texcoco
+            <a class="navbar-brand py-1" href="#inicio">
+                <!-- Se reemplaza el texto plano por el nuevo Logo_principal.png corporativo -->
+                <img src="./Logo_principal.png" alt="Dident Clinica Dental" class="navbar-logo">
             </a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
@@ -126,7 +118,7 @@
             </div>
         </header>
 
-        <!-- Servicios (Actualizados a 6 Especialidades) -->
+        <!-- Servicios -->
         <section id="servicios" class="py-5 bg-light">
             <div class="container text-center py-3">
                 <h2 class="fw-bold mb-5">Nuestros Servicios</h2>
@@ -166,7 +158,7 @@
                     <!-- 5. Prótesis -->
                     <div class="col-md-6 col-lg-4">
                         <div class="card h-100 border-0 shadow-sm p-4 card-service">
-                            <div class="text-primary mb-3"><i class="bi bi-capsule-extdisplay display-5"><i class="bi bi-gem"></i></i></div>
+                            <div class="text-primary mb-3"><i class="bi bi-gem"></i></div>
                             <h3 class="h5 card-title fw-bold">Prótesis</h3>
                             <p class="card-text text-muted">Rehabilitación e implantes mediante coronas, puentes fijas o removibles para recuperar la función y estética de tu boca.</p>
                         </div>
