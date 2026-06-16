@@ -75,30 +75,31 @@
             }
         }
 
-        /* CONFIGURACIÓN CON ALTURA FIJA ANTI-SALTOS */
+        /* CONFIGURACIÓN PROPORCIONAL FIJA - SIN CORTES */
         .carousel-custom {
             width: 100%;
-            height: 500px; /* Altura congelada estricta para PC */
+            height: auto;
+            max-height: 500px;
             overflow: hidden;
-            background-color: #000;
+            background-color: #ffffff; /* Fondo blanco limpio de respaldo */
         }
         
         .carousel-custom .carousel-item,
         .carousel-custom picture,
         .carousel-custom img {
             width: 100%;
-            height: 100%;
+            height: auto;
         }
 
         .carousel-custom img {
-            object-fit: cover; /* Fuerza a la lona a cubrir el espacio simétricamente sin alterar la altura */
-            object-position: center;
+            object-fit: contain; /* Garantiza que la lona se ajuste completa sin recortarse */
+            aspect-ratio: 4 / 1; /* Bloquea la proporción 4:1 fija en PC para evitar cualquier salto */
         }
 
-        /* Ajuste de altura fija estricta para Celulares */
-        @media (max-width: 768px) {
-            .carousel-custom {
-                height: 360px; /* Altura congelada para pantallas verticales */
+        /* Estabilización estricta para el formato cuadrado 1:1 en Celulares */
+        @media (max-width: 767px) {
+            .carousel-custom img {
+                aspect-ratio: 1 / 1; /* Forzar proporción cuadrada exacta en móvil */
             }
         }
         
@@ -207,7 +208,7 @@
         </div>
     </nav>
 
-    <!-- Carrusel Publicitario Dinámico Estabilizado a Alturas Fijas -->
+    <!-- Carrusel Publicitario Híbrido Estabilizado por Proporción de Aspecto Fijo (Anti-Cortes) -->
     <div id="carouselPublicidad" class="carousel slide carousel-custom shadow-sm" data-bs-ride="carousel">
         <div class="carousel-indicators">
             <button type="button" data-bs-target="#carouselPublicidad" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
@@ -273,7 +274,7 @@
 
     <main>
         <!-- Hero Section -->
-        <header id="inicio" class="hero-section text-center">
+        <header class="hero-section text-center">
             <div class="container">
                 <h1 class="display-4 fw-bold mb-3">Tu sonrisa en las mejores manos</h1>
                 <p class="lead mb-4 fs-4">Cuidado dental integral y profesional en Texcoco. Volverás a sonreír con confianza.</p>
@@ -368,7 +369,7 @@
                                     <i class="bi bi-whatsapp text-success me-2"></i> WhatsApp Clínico
                                 </a>
                                 <a href="tel:+525561961697" class="contact-link fs-6">
-                                    <i class="bi bi-telephone-fill icon-azul me-2"></i> 55 6196 1697
+                                    <i class="bi bi-telephone-fill icon-azul me-2"></i> 56 1961 6970
                                 </a>
                             </div>
                         </div>
