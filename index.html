@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Dident Texcoco | Consultorio Dental</title>
     
-    <!-- Icono de la pestaña (Favicon) -->
+    <!-- Icono de la pestaña (Favicon con fondo circular adaptativo) -->
     <link rel="icon" type="image/png" href="./Logo_dident.png">
     <link rel="apple-touch-icon" href="./Logo_dident.png">
     
@@ -71,6 +71,19 @@
         .contact-link:hover {
             color: #0d6efd;
         }
+        
+        /* Contenedor circular blanco para el logotipo en la barra de navegación */
+        .logo-container-nav {
+            background-color: #ffffff;
+            border-radius: 50%;
+            padding: 4px;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+            width: 36px;
+            height: 36px;
+        }
     </style>
 </head>
 <body>
@@ -79,8 +92,10 @@
     <nav class="navbar navbar-expand-lg navbar-light bg-white shadow-sm sticky-top">
         <div class="container">
             <a class="navbar-brand fw-bold text-primary d-flex align-items-center" href="#inicio">
-                <!-- Logotipo en la barra de navegación -->
-                <img src="./Logo_dident.png" alt="Logo Dident" width="30" height="30" class="d-inline-block align-top me-2" style="object-fit: contain;">
+                <!-- Logotipo dentro de su círculo blanco protector -->
+                <div class="logo-container-nav me-2">
+                    <img src="./Logo_dident.png" alt="Logo Dident" width="24" height="24" style="object-fit: contain;">
+                </div>
                 Dident Texcoco
             </a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
@@ -111,30 +126,57 @@
             </div>
         </header>
 
-        <!-- Servicios -->
+        <!-- Servicios (Actualizados a 6 Especialidades) -->
         <section id="servicios" class="py-5 bg-light">
             <div class="container text-center py-3">
                 <h2 class="fw-bold mb-5">Nuestros Servicios</h2>
                 <div class="row g-4">
-                    <div class="col-md-4">
+                    <!-- 1. Odontología General -->
+                    <div class="col-md-6 col-lg-4">
                         <div class="card h-100 border-0 shadow-sm p-4 card-service">
                             <div class="text-primary mb-3"><i class="bi bi-shield-plus display-5"></i></div>
                             <h3 class="h5 card-title fw-bold">Odontología General</h3>
-                            <p class="card-text text-muted">Limpiezas, resinas y prevención para mantener tu boca completamente sana.</p>
+                            <p class="card-text text-muted">Limpiezas profunda, resinas estéticas y tratamientos de prevención para mantener tu boca completamente sana.</p>
                         </div>
                     </div>
-                    <div class="col-md-4">
+                    <!-- 2. Estética Dental -->
+                    <div class="col-md-6 col-lg-4">
                         <div class="card h-100 border-0 shadow-sm p-4 card-service">
                             <div class="text-primary mb-3"><i class="bi bi-stars display-5"></i></div>
                             <h3 class="h5 card-title fw-bold">Estética Dental</h3>
-                            <p class="card-text text-muted">Diseño de sonrisa, blanqueamientos y carillas para lucir espectacular.</p>
+                            <p class="card-text text-muted">Diseño de sonrisa personalizado, blanqueamientos avanzados y carillas para lucir espectacular.</p>
                         </div>
                     </div>
-                    <div class="col-md-4">
+                    <!-- 3. Ortodoncia -->
+                    <div class="col-md-6 col-lg-4">
                         <div class="card h-100 border-0 shadow-sm p-4 card-service">
                             <div class="text-primary mb-3"><i class="bi bi-activity display-5"></i></div>
                             <h3 class="h5 card-title fw-bold">Ortodoncia</h3>
-                            <p class="card-text text-muted">Alinea tus dientes con brackets tradicionales o sistemas estéticos avanzados.</p>
+                            <p class="card-text text-muted">Alineación de tus dientes con brackets tradicionales o sistemas estéticos y avanzados.</p>
+                        </div>
+                    </div>
+                    <!-- 4. Endodoncia -->
+                    <div class="col-md-6 col-lg-4">
+                        <div class="card h-100 border-0 shadow-sm p-4 card-service">
+                            <div class="text-primary mb-3"><i class="bi bi-heart-pulse display-5"></i></div>
+                            <h3 class="h5 card-title fw-bold">Endodoncia</h3>
+                            <p class="card-text text-muted">Tratamientos de conductos profesionales para salvar tus piezas dentales y eliminar por completo el dolor.</p>
+                        </div>
+                    </div>
+                    <!-- 5. Prótesis -->
+                    <div class="col-md-6 col-lg-4">
+                        <div class="card h-100 border-0 shadow-sm p-4 card-service">
+                            <div class="text-primary mb-3"><i class="bi bi-capsule-extdisplay display-5"><i class="bi bi-gem"></i></i></div>
+                            <h3 class="h5 card-title fw-bold">Prótesis</h3>
+                            <p class="card-text text-muted">Rehabilitación e implantes mediante coronas, puentes fijas o removibles para recuperar la función y estética de tu boca.</p>
+                        </div>
+                    </div>
+                    <!-- 6. Cirugía Maxilofacial -->
+                    <div class="col-md-6 col-lg-4">
+                        <div class="card h-100 border-0 shadow-sm p-4 card-service">
+                            <div class="text-primary mb-3"><i class="bi bi-clipboard2-pulse display-5"></i></div>
+                            <h3 class="h5 card-title fw-bold">Cirugía Maxilofacial</h3>
+                            <p class="card-text text-muted">Extracción especializada de muelas del juicio, cirugías correctivas y procedimientos quirúrgicos bucales seguros.</p>
                         </div>
                     </div>
                 </div>
