@@ -9,7 +9,7 @@
     <link rel="icon" type="image/png" href="./Logo_dident.png">
     <link rel="apple-touch-icon" href="./Logo_dident.png">
     
-    <!-- Meta etiquetas para SEO y Redes Sociales (Logo e información en el Buscador) -->
+    <!-- Meta etiquetas para SEO y Redes Sociales -->
     <meta name="description" content="Cuidado dental integral y profesional en Texcoco. Agenda tu cita hoy mismo con la Dra. Diana López.">
     <meta property="og:title" content="Dident Texcoco | Consultorio Dental">
     <meta property="og:description" content="Tu sonrisa en las mejores manos. Odontología general, estética y ortodoncia con la Dra. Diana López.">
@@ -22,14 +22,74 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.0/font/bootstrap-icons.css">
     
     <style>
+        /* Variables de la Paleta Oficial de Identidad Dident */
+        :root {
+            --azul-oceano: #043C67;
+            --verde-eucalipto: #6CA99A;
+            --lavanda-profesional: #A97CCB;
+            --azul-claro: #A9C7F5;
+            --fondo-principal: #F8F9FA;
+        }
+
         html {
             scroll-behavior: smooth;
         }
+        
+        body {
+            background-color: var(--fondo-principal);
+        }
+
+        /* Modificación de la barra superior a Azul Océano Profundo */
+        .navbar-custom {
+            background-color: var(--azul-oceano) !important;
+            padding-top: 10px;
+            padding-bottom: 10px;
+        }
+
+        /* Enlaces de navegación con el Azul Claro de Apoyo */
+        .navbar-custom .nav-link {
+            color: var(--azul-claro) !important;
+            font-weight: 500;
+            transition: color 0.3s ease;
+        }
+        .navbar-custom .nav-link:hover {
+            color: #ffffff !important;
+        }
+
+        /* Ajuste y escalado del Logo de la Empresa */
+        .navbar-logo {
+            height: 65px; /* Aumentado sustancialmente para dar presencia */
+            width: auto;
+            object-fit: contain;
+            transition: transform 0.3s ease;
+        }
+        .navbar-logo:hover {
+            transform: scale(1.02);
+        }
+
+        /* Hero Section usando el Azul Océano para el degradado */
         .hero-section {
-            background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.6)), url('https://images.unsplash.com/photo-1629909613654-28e377c37b09?q=80&w=2070') no-repeat center center/cover;
+            background: linear-gradient(rgba(4, 60, 103, 0.6), rgba(4, 60, 103, 0.75)), url('https://images.unsplash.com/photo-1629909613654-28e377c37b09?q=80&w=2070') no-repeat center center/cover;
             color: white;
             padding: 140px 0;
         }
+
+        /* Botón de agendar cita y botones primarios con el Verde Eucalipto */
+        .btn-custom-primary {
+            background-color: var(--verde-eucalipto);
+            color: white;
+            border: none;
+            font-weight: 600;
+            transition: all 0.3s ease;
+        }
+        .btn-custom-primary:hover {
+            background-color: #558c7e;
+            color: white;
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(108, 169, 154, 0.4);
+        }
+
+        /* Botón de WhatsApp */
         .btn-whatsapp {
             background-color: #25D366;
             color: white;
@@ -41,56 +101,51 @@
             transform: translateY(-2px);
             box-shadow: 0 4px 12px rgba(37, 211, 102, 0.3);
         }
-        .btn-primary {
-            transition: all 0.3s ease;
-        }
-        .btn-primary:hover {
-            transform: translateY(-2px);
-            box-shadow: 0 4px 12px rgba(13, 110, 253, 0.3);
-        }
+
+        /* Tarjetas de servicios usando fondos limpios y sombras sutiles */
         .card-service {
+            background-color: #ffffff;
             transition: transform 0.3s ease, box-shadow 0.3s ease;
+            border-top: 4px solid var(--azul-claro); /* Detalle de color superior */
         }
         .card-service:hover {
             transform: translateY(-5px);
-            box-shadow: 0 8px 24px rgba(0,0,0,0.08) !important;
+            box-shadow: 0 8px 24px rgba(4, 60, 103, 0.1) !important;
         }
-        .social-link {
-            font-size: 1.6rem;
-            color: #adb5bd;
-            transition: color 0.3s ease;
-        }
-        .social-link:hover {
-            color: #fff;
-        }
+
+        /* Distribución de colores alternos en los íconos para balancear la paleta */
+        .icon-azul { color: var(--azul-oceano); }
+        .icon-verde { color: var(--verde-eucalipto); }
+        .icon-lavanda { color: var(--lavanda-profesional); }
+
         .contact-link {
-            color: #6c757d;
+            color: #495057;
             text-decoration: none;
             transition: color 0.2s ease;
         }
         .contact-link:hover {
-            color: #0d6efd;
+            color: var(--azul-oceano);
         }
-        
-        /* Estilo para ajustar el Logo Principal de la Empresa en la Navbar */
-        .navbar-logo {
-            height: 45px;
-            width: auto;
-            object-fit: contain;
-            filter: drop-shadow(0px 1px 2px rgba(0,0,0,0.1));
+
+        /* Personalización de la hamburguesa responsiva en modo móvil */
+        .navbar-toggler-custom {
+            border-color: rgba(169, 199, 245, 0.5) !important;
+        }
+        .navbar-toggler-custom .navbar-toggler-icon {
+            background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 30 30' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='%23A9C7F5' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E") !important;
         }
     </style>
 </head>
 <body>
 
-    <!-- Navegación -->
-    <nav class="navbar navbar-expand-lg navbar-light bg-white shadow-sm sticky-top">
+    <!-- Navegación con Fondo Azul Océano Fijo -->
+    <nav class="navbar navbar-expand-lg navbar-custom shadow sticky-top">
         <div class="container">
-            <a class="navbar-brand py-1" href="#inicio">
-                <!-- Se reemplaza el texto plano por el nuevo Logo_principal.png corporativo -->
+            <a class="navbar-brand py-0" href="#inicio">
+                <!-- El logo se amplió a 65px de alto y se integra perfectamente al fondo azul -->
                 <img src="./Logo_principal.png" alt="Dident Clinica Dental" class="navbar-logo">
             </a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <button class="navbar-toggler navbar-toggler-custom" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
             <div class="collapse navbar-collapse" id="navbarNav">
@@ -98,8 +153,8 @@
                     <li class="nav-item"><a class="nav-link" href="#inicio">Inicio</a></li>
                     <li class="nav-item"><a class="nav-link" href="#servicios">Servicios</a></li>
                     <li class="nav-item"><a class="nav-link" href="#ubicacion">Ubicación</a></li>
-                    <li class="nav-item ms-lg-2 mt-2 mt-lg-0">
-                        <a class="btn btn-primary text-white" href="https://wa.me/525561961697?text=Hola%2C%20me%20gustar%C3%ADa%20agendar%20una%20cita" target="_blank">Agendar Cita</a>
+                    <li class="nav-item ms-lg-3 mt-2 mt-lg-0">
+                        <a class="btn btn-custom-primary text-white px-3" href="https://wa.me/525561961697?text=Hola%2C%20me%20gustar%C3%ADa%20agendar%20una%20cita" target="_blank">Agendar Cita</a>
                     </li>
                 </ul>
             </div>
@@ -118,57 +173,58 @@
             </div>
         </header>
 
-        <!-- Servicios -->
-        <section id="servicios" class="py-5 bg-light">
+        <!-- Servicios utilizando la distribución cromática armónica -->
+        <section id="servicios" class="py-5">
             <div class="container text-center py-3">
-                <h2 class="fw-bold mb-5">Nuestros Servicios</h2>
+                <h2 class="fw-bold mb-2 text-dark" style="color: var(--azul-oceano) !important;">Nuestros Servicios</h2>
+                <p class="text-muted mb-5">Especialidades diseñadas para transmitir confianza, bienestar y tranquilidad.</p>
                 <div class="row g-4">
                     <!-- 1. Odontología General -->
                     <div class="col-md-6 col-lg-4">
                         <div class="card h-100 border-0 shadow-sm p-4 card-service">
-                            <div class="text-primary mb-3"><i class="bi bi-shield-plus display-5"></i></div>
-                            <h3 class="h5 card-title fw-bold">Odontología General</h3>
-                            <p class="card-text text-muted">Limpiezas profunda, resinas estéticas y tratamientos de prevención para mantener tu boca completamente sana.</p>
+                            <div class="mb-3 icon-azul"><i class="bi bi-shield-plus display-5"></i></div>
+                            <h3 class="h5 card-title fw-bold" style="color: var(--azul-oceano);">Odontología General</h3>
+                            <p class="card-text text-muted">Limpiezas profundas, resinas estéticas y tratamientos de prevención para mantener tu boca completamente sana.</p>
                         </div>
                     </div>
                     <!-- 2. Estética Dental -->
                     <div class="col-md-6 col-lg-4">
                         <div class="card h-100 border-0 shadow-sm p-4 card-service">
-                            <div class="text-primary mb-3"><i class="bi bi-stars display-5"></i></div>
-                            <h3 class="h5 card-title fw-bold">Estética Dental</h3>
+                            <div class="mb-3 icon-verde"><i class="bi bi-stars display-5"></i></div>
+                            <h3 class="h5 card-title fw-bold" style="color: var(--azul-oceano);">Estética Dental</h3>
                             <p class="card-text text-muted">Diseño de sonrisa personalizado, blanqueamientos avanzados y carillas para lucir espectacular.</p>
                         </div>
                     </div>
                     <!-- 3. Ortodoncia -->
                     <div class="col-md-6 col-lg-4">
                         <div class="card h-100 border-0 shadow-sm p-4 card-service">
-                            <div class="text-primary mb-3"><i class="bi bi-activity display-5"></i></div>
-                            <h3 class="h5 card-title fw-bold">Ortodoncia</h3>
+                            <div class="mb-3 icon-lavanda"><i class="bi bi-activity display-5"></i></div>
+                            <h3 class="h5 card-title fw-bold" style="color: var(--azul-oceano);">Ortodoncia</h3>
                             <p class="card-text text-muted">Alineación de tus dientes con brackets tradicionales o sistemas estéticos y avanzados.</p>
                         </div>
                     </div>
                     <!-- 4. Endodoncia -->
                     <div class="col-md-6 col-lg-4">
                         <div class="card h-100 border-0 shadow-sm p-4 card-service">
-                            <div class="text-primary mb-3"><i class="bi bi-heart-pulse display-5"></i></div>
-                            <h3 class="h5 card-title fw-bold">Endodoncia</h3>
+                            <div class="mb-3 icon-azul"><i class="bi bi-heart-pulse display-5"></i></div>
+                            <h3 class="h5 card-title fw-bold" style="color: var(--azul-oceano);">Endodoncia</h3>
                             <p class="card-text text-muted">Tratamientos de conductos profesionales para salvar tus piezas dentales y eliminar por completo el dolor.</p>
                         </div>
                     </div>
                     <!-- 5. Prótesis -->
                     <div class="col-md-6 col-lg-4">
                         <div class="card h-100 border-0 shadow-sm p-4 card-service">
-                            <div class="text-primary mb-3"><i class="bi bi-gem"></i></div>
-                            <h3 class="h5 card-title fw-bold">Prótesis</h3>
-                            <p class="card-text text-muted">Rehabilitación e implantes mediante coronas, puentes fijas o removibles para recuperar la función y estética de tu boca.</p>
+                            <div class="mb-3 icon-verde"><i class="bi bi-gem display-5"></i></div>
+                            <h3 class="h5 card-title fw-bold" style="color: var(--azul-oceano);">Prótesis</h3>
+                            <p class="card-text text-muted">Rehabilitación mediante coronas y puentes fijos o removibles para recuperar la función de tu boca.</p>
                         </div>
                     </div>
                     <!-- 6. Cirugía Maxilofacial -->
                     <div class="col-md-6 col-lg-4">
                         <div class="card h-100 border-0 shadow-sm p-4 card-service">
-                            <div class="text-primary mb-3"><i class="bi bi-clipboard2-pulse display-5"></i></div>
-                            <h3 class="h5 card-title fw-bold">Cirugía Maxilofacial</h3>
-                            <p class="card-text text-muted">Extracción especializada de muelas del juicio, cirugías correctivas y procedimientos quirúrgicos bucales seguros.</p>
+                            <div class="mb-3 icon-lavanda"><i class="bi bi-clipboard2-pulse display-5"></i></div>
+                            <h3 class="h5 card-title fw-bold" style="color: var(--azul-oceano);">Cirugía Maxilofacial</h3>
+                            <p class="card-text text-muted">Extracción especializada de muelas del juicio, cirugías correctivas y procedimientos seguros.</p>
                         </div>
                     </div>
                 </div>
@@ -176,45 +232,44 @@
         </section>
 
         <!-- Ubicación y Contacto -->
-        <section id="ubicacion" class="py-5">
+        <section id="ubicacion" class="py-5 bg-white">
             <div class="container py-3">
                 <div class="row g-5">
-                    <!-- Columna Izquierda: Datos, Nota del Timbre e Información de la Doctora -->
                     <div class="col-lg-6">
-                        <h2 class="fw-bold mb-4">Ubicación y Contacto</h2>
+                        <h2 class="fw-bold mb-4" style="color: var(--azul-oceano);">Ubicación y Contacto</h2>
                         
                         <div class="mb-4">
-                            <p class="text-muted fs-5 mb-2"><i class="bi bi-geo-alt-fill text-primary me-2"></i> C. Fray Pedro de Gante 416, San Mateo IV, 56170 Texcoco de Mora, Méx.</p>
-                            <p class="text-muted fs-5 mb-2"><i class="bi bi-bell-fill text-primary me-2"></i> <strong>Nota:</strong> Favor de tocar el timbre #2</p>
-                            <p class="text-muted fs-5 mb-4"><i class="bi bi-clock-fill text-primary me-2"></i> <strong>Horarios:</strong> Lunes a Sábado: 10:00 AM - 7:00 PM</p>
+                            <p class="text-muted fs-5 mb-2"><i class="bi bi-geo-alt-fill icon-azul me-2"></i> C. Fray Pedro de Gante 416, San Mateo IV, 56170 Texcoco de Mora, Méx.</p>
+                            <p class="text-muted fs-5 mb-2"><i class="bi bi-bell-fill icon-azul me-2"></i> <strong>Nota:</strong> Favor de tocar el timbre #2</p>
+                            <p class="text-muted fs-5 mb-4"><i class="bi bi-clock-fill icon-azul me-2"></i> <strong>Horarios:</strong> Lunes a Sábado: 10:00 AM - 7:00 PM</p>
                         </div>
 
-                        <!-- Tarjeta de Contacto Profesional de la Doctora -->
-                        <div class="card border-0 bg-light p-4 shadow-sm mb-4">
-                            <h4 class="h5 fw-bold text-dark mb-3"><i class="bi bi-person-badge text-primary me-2"></i>Contacto Clínico</h4>
+                        <!-- Tarjeta de Contacto Profesional -->
+                        <div class="card border-0 p-4 shadow-sm mb-4" style="background-color: var(--fondo-principal); border-left: 4px solid var(--verde-eucalipto);">
+                            <h4 class="h5 fw-bold text-dark mb-3"><i class="bi bi-person-badge icon-azul me-2"></i>Contacto Clínico</h4>
                             <h5 class="h6 fw-bold text-secondary mb-3">Dra. Diana López Escamilla</h5>
                             
                             <div class="d-flex flex-column gap-2">
                                 <a href="mailto:dra.dianalopez@dident.mx" class="contact-link fs-6">
-                                    <i class="bi bi-envelope-fill text-primary me-2"></i> dra.dianalopez@dident.mx
+                                    <i class="bi bi-envelope-fill icon-azul me-2"></i> dra.dianalopez@dident.mx
                                 </a>
                                 <a href="https://wa.me/525561961697?text=Hola%20Dra.%20Diana%20buen%20d%C3%ADa" target="_blank" class="contact-link fs-6">
                                     <i class="bi bi-whatsapp text-success me-2"></i> WhatsApp Clínico
                                 </a>
                                 <a href="tel:+525561961697" class="contact-link fs-6">
-                                    <i class="bi bi-telephone-fill text-primary me-2"></i> 55 6196 1697
+                                    <i class="bi bi-telephone-fill icon-azul me-2"></i> 55 6196 1697
                                 </a>
                             </div>
                         </div>
                         
-                        <!-- Contenedor Cuadrado con Ajuste Responsivo para la Imagen de la Fachada -->
+                        <!-- Contenedor de la Imagen de la Fachada -->
                         <div class="mt-4">
                             <h5 class="fw-bold text-secondary mb-2" style="font-size: 0.9rem; text-transform: uppercase; letter-spacing: 1px;">Identifica nuestro consultorio:</h5>
                             <img src="./fachada.jpeg" alt="Indicaciones y Fachada del Consultorio Dental Dident Texcoco" class="img-fluid rounded shadow-sm border" style="width: 100%; max-width: 440px; height: auto; aspect-ratio: 1 / 1; object-fit: contain;" onerror="this.src='./Fachada.jpeg';">
                         </div>
                     </div>
                     
-                    <!-- Columna Derecha: Mapa de Google Maps con la Referencia Actualizada -->
+                    <!-- Columna Derecha: Mapa -->
                     <div class="col-lg-6 d-flex flex-column">
                         <div class="ratio ratio-16x9 shadow rounded overflow-hidden flex-grow-1" style="min-height: 380px;">
                             <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3762.636906236688!2d-98.8858763!3d19.5142084!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x85d1e6ffa2862d73%3A0x9d00922849cf24eb!2sC.%20Fray%20Pedro%20de%20Gante%20416%2C%20San%20Mateo%2C%2056170%20Texcoco%20de%20Mora%2C%20M%C3%A9x.!5e0!3m2!1ses-419!2smx!4v1718500000000!5m2!1ses-419!2smx" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade" title="Ubicación de Dident Texcoco en Google Maps"></iframe>
@@ -225,14 +280,14 @@
         </section>
     </main>
 
-    <!-- Footer con Canales Sociales Activos -->
-    <footer class="bg-dark text-white py-4 text-center">
+    <!-- Footer usando el Azul Océano -->
+    <footer class="py-4 text-center" style="background-color: var(--azul-oceano);">
         <div class="container">
             <div class="mb-3">
-                <a href="https://www.facebook.com/share/199etbwt7L/" target="_blank" class="mx-3 social-link" aria-label="Facebook de Dident"><i class="bi bi-facebook"></i></a>
-                <a href="https://www.instagram.com/dident.texcoco?igsh=MTg5OXNtbWFsaG43ZA==" target="_blank" class="mx-3 social-link" aria-label="Instagram de Dident"><i class="bi bi-instagram"></i></a>
+                <a href="https://www.facebook.com/share/199etbwt7L/" target="_blank" class="mx-3 social-link" style="color: var(--azul-claro);" aria-label="Facebook de Dident"><i class="bi bi-facebook"></i></a>
+                <a href="https://www.instagram.com/dident.texcoco?igsh=MTg5OXNtbWFsaG43ZA==" target="_blank" class="mx-3 social-link" style="color: var(--azul-claro);" aria-label="Instagram de Dident"><i class="bi bi-instagram"></i></a>
             </div>
-            <p class="mb-0 text-secondary" style="font-size: 0.9rem;">&copy; 2026 Dident Texcoco. Todos los derechos reservados.</p>
+            <p class="mb-0" style="font-size: 0.9rem; color: var(--azul-claro);">&copy; 2026 Dident Texcoco. Todos los derechos reservados.</p>
         </div>
     </footer>
 
