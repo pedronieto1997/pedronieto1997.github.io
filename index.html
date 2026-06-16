@@ -42,8 +42,8 @@
         /* Modificación de la barra superior a Azul Océano Profundo */
         .navbar-custom {
             background-color: var(--azul-oceano) !important;
-            padding-top: 10px;
-            padding-bottom: 10px;
+            padding-top: 5px;
+            padding-bottom: 5px;
         }
 
         /* Enlaces de navegación con el Azul Claro de Apoyo */
@@ -56,15 +56,19 @@
             color: #ffffff !important;
         }
 
-        /* Ajuste y escalado del Logo de la Empresa */
+        /* Ajuste y escalado masivo del Logo de la Empresa */
         .navbar-logo {
-            height: 65px; /* Aumentado sustancialmente para dar presencia */
+            height: 95px; /* Escalado a tamaño grande e imponente */
             width: auto;
             object-fit: contain;
+            margin-bottom: -15px; /* Truco de TI para sobresalir elegantemente de la barra */
+            margin-top: -10px;
             transition: transform 0.3s ease;
+            position: relative;
+            z-index: 1020;
         }
         .navbar-logo:hover {
-            transform: scale(1.02);
+            transform: scale(1.03);
         }
 
         /* Hero Section usando el Azul Océano para el degradado */
@@ -74,7 +78,7 @@
             padding: 140px 0;
         }
 
-        /* Botón de agendar cita y botones primarios con el Verde Eucalipto */
+        /* Botón de agendar cita con el Verde Eucalipto */
         .btn-custom-primary {
             background-color: var(--verde-eucalipto);
             color: white;
@@ -106,14 +110,14 @@
         .card-service {
             background-color: #ffffff;
             transition: transform 0.3s ease, box-shadow 0.3s ease;
-            border-top: 4px solid var(--azul-claro); /* Detalle de color superior */
+            border-top: 4px solid var(--azul-claro);
         }
         .card-service:hover {
             transform: translateY(-5px);
             box-shadow: 0 8px 24px rgba(4, 60, 103, 0.1) !important;
         }
 
-        /* Distribución de colores alternos en los íconos para balancear la paleta */
+        /* Distribución de colores alternos en los íconos */
         .icon-azul { color: var(--azul-oceano); }
         .icon-verde { color: var(--verde-eucalipto); }
         .icon-lavanda { color: var(--lavanda-profesional); }
@@ -142,7 +146,7 @@
     <nav class="navbar navbar-expand-lg navbar-custom shadow sticky-top">
         <div class="container">
             <a class="navbar-brand py-0" href="#inicio">
-                <!-- El logo se amplió a 65px de alto y se integra perfectamente al fondo azul -->
+                <!-- Logotipo Principal expandido e integrado -->
                 <img src="./Logo_principal.png" alt="Dident Clinica Dental" class="navbar-logo">
             </a>
             <button class="navbar-toggler navbar-toggler-custom" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
@@ -173,10 +177,10 @@
             </div>
         </header>
 
-        <!-- Servicios utilizando la distribución cromática armónica -->
+        <!-- Servicios -->
         <section id="servicios" class="py-5">
             <div class="container text-center py-3">
-                <h2 class="fw-bold mb-2 text-dark" style="color: var(--azul-oceano) !important;">Nuestros Servicios</h2>
+                <h2 class="fw-bold mb-2" style="color: var(--azul-oceano) !important;">Nuestros Servicios</h2>
                 <p class="text-muted mb-5">Especialidades diseñadas para transmitir confianza, bienestar y tranquilidad.</p>
                 <div class="row g-4">
                     <!-- 1. Odontología General -->
@@ -280,12 +284,13 @@
         </section>
     </main>
 
-    <!-- Footer usando el Azul Océano -->
+    <!-- Footer con Canales Sociales Completos (FB, IG, TikTok) -->
     <footer class="py-4 text-center" style="background-color: var(--azul-oceano);">
         <div class="container">
-            <div class="mb-3">
-                <a href="https://www.facebook.com/share/199etbwt7L/" target="_blank" class="mx-3 social-link" style="color: var(--azul-claro);" aria-label="Facebook de Dident"><i class="bi bi-facebook"></i></a>
-                <a href="https://www.instagram.com/dident.texcoco?igsh=MTg5OXNtbWFsaG43ZA==" target="_blank" class="mx-3 social-link" style="color: var(--azul-claro);" aria-label="Instagram de Dident"><i class="bi bi-instagram"></i></a>
+            <div class="mb-3 d-flex justify-content-center align-items-center gap-4">
+                <a href="https://www.facebook.com/share/199etbwt7L/" target="_blank" class="social-link" style="color: var(--azul-claro);" aria-label="Facebook de Dident"><i class="bi bi-facebook"></i></a>
+                <a href="https://www.instagram.com/dident.texcoco?igsh=MTg5OXNtbWFsaG43ZA==" target="_blank" class="social-link" style="color: var(--azul-claro);" aria-label="Instagram de Dident"><i class="bi bi-instagram"></i></a>
+                <a href="https://www.tiktok.com/@dr.dianalopez0" target="_blank" class="social-link" style="color: var(--azul-claro);" aria-label="TikTok de Dident"><i class="bi bi-tiktok"></i></a>
             </div>
             <p class="mb-0" style="font-size: 0.9rem; color: var(--azul-claro);">&copy; 2026 Dident Texcoco. Todos los derechos reservados.</p>
         </div>
