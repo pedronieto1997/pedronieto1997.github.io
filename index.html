@@ -81,7 +81,7 @@
             height: auto;
             max-height: 500px;
             overflow: hidden;
-            background-color: #ffffff; /* Fondo blanco limpio de respaldo */
+            background-color: #ffffff;
         }
         
         .carousel-custom .carousel-item,
@@ -92,14 +92,14 @@
         }
 
         .carousel-custom img {
-            object-fit: contain; /* Garantiza que la lona se ajuste completa sin recortarse */
-            aspect-ratio: 4 / 1; /* Bloquea la proporción 4:1 fija en PC para evitar cualquier salto */
+            object-fit: contain;
+            aspect-ratio: 4 / 1;
         }
 
         /* Estabilización estricta para el formato cuadrado 1:1 en Celulares */
         @media (max-width: 767px) {
             .carousel-custom img {
-                aspect-ratio: 1 / 1; /* Forzar proporción cuadrada exacta en móvil */
+                aspect-ratio: 1 / 1;
             }
         }
         
@@ -162,8 +162,9 @@
             color: var(--azul-oceano);
         }
 
+        /* Ajuste fino homologado con la tipografía de "Nuestros Servicios" */
         .location-text p {
-            font-size: 1.1rem;
+            font-size: 1rem; 
             line-height: 1.6;
         }
 
@@ -181,6 +182,23 @@
             line-height: 1;
             display: inline-block;
             transform: translateY(-2px);
+        }
+
+        /* Estilos de la Firma de Desarrollo */
+        .developer-signature {
+            font-size: 0.8rem;
+            color: var(--azul-claro);
+            opacity: 0.85;
+            transition: opacity 0.3s ease;
+        }
+        .developer-signature a {
+            color: #ffffff;
+            text-decoration: none;
+            font-weight: 500;
+        }
+        .developer-signature a:hover {
+            color: var(--azul-claro);
+            text-decoration: underline;
         }
     </style>
 </head>
@@ -208,7 +226,7 @@
         </div>
     </nav>
 
-    <!-- Carrusel Publicitario Híbrido Estabilizado por Proporción de Aspecto Fijo (Anti-Cortes) -->
+    <!-- Carrusel Publicitario -->
     <div id="carouselPublicidad" class="carousel slide carousel-custom shadow-sm" data-bs-ride="carousel">
         <div class="carousel-indicators">
             <button type="button" data-bs-target="#carouselPublicidad" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
@@ -369,7 +387,7 @@
                                     <i class="bi bi-whatsapp text-success me-2"></i> WhatsApp Clínico
                                 </a>
                                 <a href="tel:+525561961697" class="contact-link fs-6">
-                                    <i class="bi bi-telephone-fill icon-azul me-2"></i> 56 1961 6970
+                                    <i class="bi bi-telephone-fill icon-azul me-2"></i> 55 6196 1697
                                 </a>
                             </div>
                         </div>
@@ -392,7 +410,7 @@
         </section>
     </main>
 
-    <!-- Barra Inferior (Footer) -->
+    <!-- Barra Inferior (Footer) con Firma de Desarrollo Integrada -->
     <footer class="py-4 text-center" style="background-color: var(--azul-oceano);">
         <div class="container">
             <div class="mb-3 d-flex justify-content-center align-items-center gap-4">
@@ -401,7 +419,8 @@
                 <a href="https://www.tiktok.com/@dr.dianalopez0" target="_blank" class="social-link fs-3" style="color: var(--azul-claro);" aria-label="TikTok de Dident"><i class="bi bi-tiktok"></i></a>
                 <a href="https://www.doctoralia.com.mx/diana-lopez-escamilla/dentista-odontologo/texcoco" target="_blank" class="social-link icon-doctoralia text-decoration-none" style="color: var(--azul-claro);" aria-label="Doctoralia de la Dra. Diana López">dͺ</a>
             </div>
-            <p class="mb-0" style="font-size: 0.9rem; color: var(--azul-claro);">© 2026 Dident Texcoco. Todos los derechos reservados.</p>
+            <p class="mb-1" style="font-size: 0.9rem; color: var(--azul-claro);">&copy; 2026 Dident Texcoco. Todos los derechos reservados.</p>
+            <p class="mb-0 developer-signature">Desarrollado por <a href="mailto:pedronieto-1997@hotmail.com">Pedro Nieto Martinez</a></p>
         </div>
     </footer>
 
