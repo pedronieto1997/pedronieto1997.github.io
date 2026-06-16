@@ -5,11 +5,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Dident Texcoco | Consultorio Dental</title>
     
-    <!-- Icono de la pestaña (Favicon) -->
     <link rel="icon" type="image/png" href="./Logo_dident.png">
     <link rel="apple-touch-icon" href="./Logo_dident.png">
     
-    <!-- Meta etiquetas para SEO y Redes Sociales -->
     <meta name="description" content="Cuidado dental integral y profesional en Texcoco. Agenda tu cita hoy mismo con la Dra. Diana López.">
     <meta property="og:title" content="Dident Texcoco | Consultorio Dental">
     <meta property="og:description" content="Tu sonrisa en las mejores manos. Odontología general, estética y ortodoncia con la Dra. Diana López.">
@@ -17,7 +15,6 @@
     <meta property="og:image:type" content="image/png">
     <meta property="og:url" content="https://www.dident.mx">
 
-    <!-- Bootstrap 5 & Icons -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.0/font/bootstrap-icons.css">
     
@@ -192,7 +189,7 @@
             padding: 30px;
             height: 100%;
             display: flex;
-            flex-column: column;
+            flex-direction: column;
             justify-content: center;
             align-items: center;
         }
@@ -216,7 +213,6 @@
 </head>
 <body>
 
-    <!-- Navbar con comportamiento Sticky -->
     <nav class="navbar navbar-expand-lg navbar-custom shadow sticky-top">
         <div class="container">
             <a class="navbar-brand py-0" href="#inicio">
@@ -239,7 +235,6 @@
         </div>
     </nav>
 
-    <!-- Carrusel Publicitario -->
     <div id="carouselPublicidad" class="carousel slide carousel-custom shadow-sm" data-bs-ride="carousel">
         <div class="carousel-indicators">
             <button type="button" data-bs-target="#carouselPublicidad" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
@@ -250,42 +245,36 @@
             <button type="button" data-bs-target="#carouselPublicidad" data-bs-slide-to="5" aria-label="Slide 6"></button>
         </div>
         <div class="carousel-inner">
-            <!-- Promo 1 -->
             <div class="carousel-item active" data-bs-interval="4000">
                 <picture>
                     <source media="(max-width: 767px)" srcset="./Publicidad/promo1.png">
                     <img src="./Publicidad/promopc1.png" alt="Promoción Dident 1">
                 </picture>
             </div>
-            <!-- Promo 2 -->
             <div class="carousel-item" data-bs-interval="4000">
                 <picture>
                     <source media="(max-width: 767px)" srcset="./Publicidad/promo2.png">
                     <img src="./Publicidad/promopc2.png" alt="Promoción Dident 2">
                 </picture>
             </div>
-            <!-- Promo 3 -->
             <div class="carousel-item" data-bs-interval="4000">
                 <picture>
                     <source media="(max-width: 767px)" srcset="./Publicidad/promo3.png">
                     <img src="./Publicidad/promopc3.png" alt="Promoción Dident 3">
                 </picture>
             </div>
-            <!-- Promo 4 -->
             <div class="carousel-item" data-bs-interval="4000">
                 <picture>
                     <source media="(max-width: 767px)" srcset="./Publicidad/promo4.png">
                     <img src="./Publicidad/promopc4.png" alt="Promoción Dident 4">
                 </picture>
             </div>
-            <!-- Promo 5 -->
             <div class="carousel-item" data-bs-interval="4000">
                 <picture>
                     <source media="(max-width: 767px)" srcset="./Publicidad/promo5.png">
                     <img src="./Publicidad/promopc5.png" alt="Promoción Dident 5">
                 </picture>
             </div>
-            <!-- Promo 6 -->
             <div class="carousel-item" data-bs-interval="4000">
                 <picture>
                     <source media="(max-width: 767px)" srcset="./Publicidad/promo6.png">
@@ -302,7 +291,6 @@
     </div>
 
     <main>
-        <!-- Hero Section -->
         <header class="hero-section text-center">
             <div class="container">
                 <h1 class="display-4 fw-bold mb-3">Tu sonrisa en las mejores manos</h1>
@@ -313,13 +301,11 @@
             </div>
         </header>
 
-        <!-- Sección de 6 Especialidades Médicas Completa -->
         <section id="servicios" class="py-5">
             <div class="container text-center py-3">
                 <h2 class="fw-bold mb-2" style="color: var(--azul-oceano) !important;">Nuestros Servicios</h2>
                 <p class="text-muted mb-5">Especialidades diseñadas para transmitir confianza, bienestar y tranquilidad.</p>
                 <div class="row g-4">
-                    <!-- 1. Odontología General -->
                     <div class="col-md-6 col-lg-4">
                         <div class="card h-100 border-0 shadow-sm p-4 card-service">
                             <div class="mb-3 icon-azul"><i class="bi bi-shield-plus display-5"></i></div>
@@ -327,7 +313,6 @@
                             <p class="card-text text-muted">Limpiezas profundas, resinas estéticas y tratamientos de prevención para mantener tu boca completamente sana.</p>
                         </div>
                     </div>
-                    <!-- 2. Estética Dental -->
                     <div class="col-md-6 col-lg-4">
                         <div class="card h-100 border-0 shadow-sm p-4 card-service">
                             <div class="mb-3 icon-verde"><i class="bi bi-stars display-5"></i></div>
@@ -335,7 +320,6 @@
                             <p class="card-text text-muted">Diseño de sonrisa personalizado, blanqueamientos avanzados y carillas para lucir espectacular.</p>
                         </div>
                     </div>
-                    <!-- 3. Ortodoncia -->
                     <div class="col-md-6 col-lg-4">
                         <div class="card h-100 border-0 shadow-sm p-4 card-service">
                             <div class="mb-3 icon-lavanda"><i class="bi bi-activity display-5"></i></div>
@@ -343,7 +327,6 @@
                             <p class="card-text text-muted">Alineación de tus dientes con brackets tradicionales o sistemas estéticos y avanzados.</p>
                         </div>
                     </div>
-                    <!-- 4. Endodoncia -->
                     <div class="col-md-6 col-lg-4">
                         <div class="card h-100 border-0 shadow-sm p-4 card-service">
                             <div class="mb-3 icon-azul"><i class="bi bi-heart-pulse display-5"></i></div>
@@ -351,7 +334,6 @@
                             <p class="card-text text-muted">Tratamientos de conductos profesionales para salvar tus piezas dentales y eliminar por completo el dolor.</p>
                         </div>
                     </div>
-                    <!-- 5. Prótesis -->
                     <div class="col-md-6 col-lg-4">
                         <div class="card h-100 border-0 shadow-sm p-4 card-service">
                             <div class="mb-3 icon-verde"><i class="bi bi-gem display-5"></i></div>
@@ -359,7 +341,6 @@
                             <p class="card-text text-muted">Rehabilitación mediante coronas y puentes fijos o removibles para recuperar la función de tu boca.</p>
                         </div>
                     </div>
-                    <!-- 6. Cirugía Maxilofacial -->
                     <div class="col-md-6 col-lg-4">
                         <div class="card h-100 border-0 shadow-sm p-4 card-service">
                             <div class="mb-3 icon-lavanda"><i class="bi bi-clipboard2-pulse display-5"></i></div>
@@ -371,28 +352,24 @@
             </div>
         </section>
 
-        <!-- SECCIÓN DE RESEÑAS MULTIPLATAFORMA SIMÉTRICA -->
         <section id="opiniones" class="py-5" style="background-color: #f1f3f5;">
             <div class="container py-3 text-center">
                 <h2 class="fw-bold mb-2" style="color: var(--azul-oceano);">Opiniones de nuestros pacientes</h2>
                 <p class="text-muted mb-5">Lo que dicen de su experiencia en nuestras plataformas oficiales.</p>
                 
                 <div class="row g-4 justify-content-center align-items-stretch">
-                    <!-- Columna Izquierda: Google Maps & Facebook (Automatizado por Trustindex) -->
                     <div class="col-lg-6">
                         <div class="p-3 bg-white rounded-3 shadow-sm h-100">
                             <h4 class="h6 fw-bold text-secondary mb-3"><i class="bi bi-google me-1"></i> Google & <i class="bi bi-facebook me-1"></i> Facebook</h4>
-                            <!-- Integración de Trustindex -->
                             <script defer async src='https://cdn.trustindex.io/loader.js?4e7986f74eae42169626404d67c'></script>
                         </div>
                     </div>
                     
-                    <!-- Columna Derecha: Doctoralia (Enlace Directo Verificado Solución de TI) -->
                     <div class="col-lg-6">
                         <div class="doctoralia-card shadow-sm bg-white rounded-3 text-center">
                             <h4 class="h6 fw-bold text-secondary mb-3"><i class="bi bi-heart-pulse-fill text-danger me-1"></i> Perfil Médico Doctoralia</h4>
                             <p class="text-muted small px-3 mb-4">La Dra. Diana López Escamilla cuenta con la certificación y excelentes calificaciones de sus pacientes en el portal médico líder de México.</p>
-                            <a href="https://www.doctoralia.com.mx/diana-lopez-escamilla/dentista-odontologo/texcoco" target="_blank" class="btn-doctoralia-link">
+                            <a href="https://www.doctoralia.com.mx/diana-lopez-escamilla/dentista-odontologo/texcoco#profile-reviews" target="_blank" class="btn-doctoralia-link">
                                 Ver opiniones en Doctoralia
                             </a>
                         </div>
@@ -401,11 +378,9 @@
             </div>
         </section>
 
-        <!-- Sección de Ubicación, Contacto y Mapa Integrados -->
         <section id="ubicacion" class="py-5 bg-white">
             <div class="container py-3">
                 <div class="row g-5">
-                    <!-- Columna Izquierda: Datos del Consultorio -->
                     <div class="col-lg-6">
                         <h2 class="h5 fw-bold mb-4" style="color: var(--azul-oceano);">Ubicación y Contacto</h2>
                         
@@ -415,7 +390,6 @@
                             <p class="text-muted mb-4"><i class="bi bi-clock-fill icon-azul me-2"></i> <strong>Horarios:</strong> Lunes a Sábado: 10:00 AM - 7:00 PM</p>
                         </div>
 
-                        <!-- Tarjeta de Contacto Profesional -->
                         <div class="card border-0 p-4 shadow-sm mb-4" style="background-color: var(--fondo-principal); border-left: 4px solid var(--verde-eucalipto);">
                             <h4 class="h5 fw-bold text-dark mb-3"><i class="bi bi-person-badge icon-azul me-2"></i>Contacto Clínico</h4>
                             <h5 class="h6 fw-bold text-secondary mb-3">Dra. Diana López Escamilla</h5>
@@ -433,14 +407,12 @@
                             </div>
                         </div>
                         
-                        <!-- Imagen de la Fachada -->
                         <div class="mt-4">
                             <h5 class="fw-bold text-secondary mb-2" style="font-size: 0.9rem; text-transform: uppercase; letter-spacing: 1px;">Identifica nuestro consultorio:</h5>
                             <img src="./fachada.jpeg" alt="Indicaciones y Fachada del Consultorio Dental Dident Texcoco" class="img-fluid rounded shadow-sm border" style="width: 100%; max-width: 440px; height: auto; aspect-ratio: 1 / 1; object-fit: contain;" onerror="this.src='./Fachada.jpeg';">
                         </div>
                     </div>
                     
-                    <!-- Columna Derecha: Mapa Incrustado -->
                     <div class="col-lg-6 d-flex flex-column">
                         <div class="ratio ratio-16x9 shadow rounded overflow-hidden flex-grow-1" style="min-height: 380px;">
                             <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3762.636906236688!2d-98.8858763!3d19.5142084!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x85d1e6ffa2862d73%3A0x9d00922849cf24eb!2sC.%20Fray%20Pedro%20de%20Gante%20416%2C%20San%20Mateo%2C%2056170%20Texcoco%20de%20Mora%2C%20M%C3%A9x.!5e0!3m2!1ses-419!2smx!4v1718500000000!5m2!1ses-419!2smx" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade" title="Ubicación de Dident Texcoco en Google Maps"></iframe>
@@ -451,7 +423,6 @@
         </section>
     </main>
 
-    <!-- Barra Inferior (Footer) -->
     <footer class="py-4 text-center" style="background-color: var(--azul-oceano);">
         <div class="container">
             <div class="mb-3 d-flex justify-content-center align-items-center gap-4">
