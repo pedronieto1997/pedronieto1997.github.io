@@ -183,6 +183,35 @@
             display: inline-block;
             transform: translateY(-2px);
         }
+
+        /* Estilos específicos para la tarjeta de Doctoralia */
+        .doctoralia-card {
+            background-color: #ffffff;
+            border: 1px solid #e1e4e6;
+            border-radius: 12px;
+            padding: 30px;
+            height: 100%;
+            display: flex;
+            flex-column: column;
+            justify-content: center;
+            align-items: center;
+        }
+        .btn-doctoralia-link {
+            background-color: #ffffff;
+            color: #00C3A5;
+            border: 2px solid #00C3A5;
+            font-weight: 700;
+            padding: 12px 25px;
+            border-radius: 30px;
+            transition: all 0.3s ease;
+            text-decoration: none;
+        }
+        .btn-doctoralia-link:hover {
+            background-color: #00C3A5;
+            color: #ffffff;
+            box-shadow: 0 4px 15px rgba(0, 195, 165, 0.3);
+            transform: translateY(-2px);
+        }
     </style>
 </head>
 <body>
@@ -342,16 +371,31 @@
             </div>
         </section>
 
-        <!-- SECCIÓN DE RESEÑAS UNIFICADAS -->
+        <!-- SECCIÓN DE RESEÑAS MULTIPLATAFORMA SIMÉTRICA -->
         <section id="opiniones" class="py-5" style="background-color: #f1f3f5;">
             <div class="container py-3 text-center">
                 <h2 class="fw-bold mb-2" style="color: var(--azul-oceano);">Opiniones de nuestros pacientes</h2>
-                <p class="text-muted mb-4">Lo que dicen de su experiencia en nuestras plataformas oficiales.</p>
+                <p class="text-muted mb-5">Lo que dicen de su experiencia en nuestras plataformas oficiales.</p>
                 
-                <div class="row justify-content-center">
-                    <div class="col-lg-10">
-                        <!-- Integración Automática de Trustindex (Google & Facebook) -->
-                        <script defer async src='https://cdn.trustindex.io/loader.js?4e7986f74eae42169626404d67c'></script>
+                <div class="row g-4 justify-content-center align-items-stretch">
+                    <!-- Columna Izquierda: Google Maps & Facebook (Automatizado por Trustindex) -->
+                    <div class="col-lg-6">
+                        <div class="p-3 bg-white rounded-3 shadow-sm h-100">
+                            <h4 class="h6 fw-bold text-secondary mb-3"><i class="bi bi-google me-1"></i> Google & <i class="bi bi-facebook me-1"></i> Facebook</h4>
+                            <!-- Integración de Trustindex -->
+                            <script defer async src='https://cdn.trustindex.io/loader.js?4e7986f74eae42169626404d67c'></script>
+                        </div>
+                    </div>
+                    
+                    <!-- Columna Derecha: Doctoralia (Enlace Directo Verificado Solución de TI) -->
+                    <div class="col-lg-6">
+                        <div class="doctoralia-card shadow-sm bg-white rounded-3 text-center">
+                            <h4 class="h6 fw-bold text-secondary mb-3"><i class="bi bi-heart-pulse-fill text-danger me-1"></i> Perfil Médico Doctoralia</h4>
+                            <p class="text-muted small px-3 mb-4">La Dra. Diana López Escamilla cuenta con la certificación y excelentes calificaciones de sus pacientes en el portal médico líder de México.</p>
+                            <a href="https://www.doctoralia.com.mx/diana-lopez-escamilla/dentista-odontologo/texcoco" target="_blank" class="btn-doctoralia-link">
+                                Ver opiniones en Doctoralia
+                            </a>
+                        </div>
                     </div>
                 </div>
             </div>
