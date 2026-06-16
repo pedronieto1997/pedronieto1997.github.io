@@ -162,9 +162,9 @@
             color: var(--azul-oceano);
         }
 
-        /* Ajuste fino homologado con la tipografía de "Nuestros Servicios" */
+        /* Ajuste fino homologado exactamente con la tipografía de las descripciones de servicios */
         .location-text p {
-            font-size: 1rem; 
+            font-size: 0.9rem; 
             line-height: 1.6;
         }
 
@@ -226,7 +226,7 @@
         </div>
     </nav>
 
-    <!-- Carrusel Publicitario -->
+    <!-- Carrusel Publicitario Limpio con Flechas Oficiales Discretas -->
     <div id="carouselPublicidad" class="carousel slide carousel-custom shadow-sm" data-bs-ride="carousel">
         <div class="carousel-indicators">
             <button type="button" data-bs-target="#carouselPublicidad" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
@@ -280,13 +280,13 @@
                 </picture>
             </div>
         </div>
+        <!-- Control de navegación izquierdo discreto -->
         <button class="carousel-control-prev" type="button" data-bs-target="#carouselPublicidad" data-bs-slide="prev">
             <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-            <span class="visibly-hidden">Anterior</span>
         </button>
+        <!-- Control de navegación derecho discreto -->
         <button class="carousel-control-next" type="button" data-bs-target="#carouselPublicidad" data-bs-slide="next">
             <span class="carousel-control-next-icon" aria-hidden="true"></span>
-            <span class="visibly-hidden">Siguiente</span>
         </button>
     </div>
 
@@ -366,7 +366,7 @@
                 <div class="row g-5">
                     <!-- Columna Izquierda: Datos del Consultorio -->
                     <div class="col-lg-6">
-                        <h2 class="fw-bold mb-4" style="color: var(--azul-oceano);">Ubicación y Contacto</h2>
+                        <h2 class="h5 fw-bold mb-4" style="color: var(--azul-oceano);">Ubicación y Contacto</h2>
                         
                         <div class="mb-4 location-text">
                             <p class="text-muted mb-2"><i class="bi bi-geo-alt-fill icon-azul me-2"></i> C. Fray Pedro de Gante 416, San Mateo IV, 56170 Texcoco de Mora, Méx.</p>
@@ -410,7 +410,7 @@
         </section>
     </main>
 
-    <!-- Barra Inferior (Footer) con Firma de Desarrollo Integrada -->
+    <!-- Barra Inferior (Footer) -->
     <footer class="py-4 text-center" style="background-color: var(--azul-oceano);">
         <div class="container">
             <div class="mb-3 d-flex justify-content-center align-items-center gap-4">
@@ -420,7 +420,7 @@
                 <a href="https://www.doctoralia.com.mx/diana-lopez-escamilla/dentista-odontologo/texcoco" target="_blank" class="social-link icon-doctoralia text-decoration-none" style="color: var(--azul-claro);" aria-label="Doctoralia de la Dra. Diana López">dͺ</a>
             </div>
             <p class="mb-1" style="font-size: 0.9rem; color: var(--azul-claro);">&copy; 2026 Dident Texcoco. Todos los derechos reservados.</p>
-            <p class="mb-0 developer-signature">Desarrollado por <a href="mailto:pedronieto-1997@hotmail.com">Pedro Nieto Martinez</a></p>
+            <p class="mb-0" developer-signature="" style="font-size: 0.8rem; color: var(--azul-claro); opacity: 0.85;">Desarrollado por <a href="mailto:pedronieto-1997@hotmail.com" style="color: #ffffff; text-decoration: none; font-weight: 500;">Pedro Nieto Martinez</a></p>
         </div>
     </footer>
 
