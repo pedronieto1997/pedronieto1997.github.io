@@ -79,7 +79,7 @@
         .carousel-custom {
             width: 100%;
             height: auto;
-            max-height: none; /* Quitamos el freno rígido para evitar recortes forzados */
+            max-height: none;
             overflow: hidden;
             background-color: #ffffff;
         }
@@ -93,13 +93,13 @@
 
         .carousel-custom img {
             object-fit: contain;
-            aspect-ratio: 25 / 10; /* Proporción exacta 2.5:1 para tus nuevas lonas de PC */
+            aspect-ratio: 25 / 10;
         }
 
         /* Estabilización estricta para el formato cuadrado 1:1 en Celulares */
         @media (max-width: 767px) {
             .carousel-custom img {
-                aspect-ratio: 1 / 1; /* Se mantiene para proteger la lona móvil */
+                aspect-ratio: 1 / 1;
             }
         }
         
@@ -162,7 +162,6 @@
             color: var(--azul-oceano);
         }
 
-        /* Ajuste fino homologado exactamente con la tipografía de las descripciones de servicios */
         .location-text p {
             font-size: 0.9rem; 
             line-height: 1.6;
@@ -213,50 +212,116 @@
             transform: translateY(-2px);
         }
 
-        /* BOTÓN FLOTANTE PERMANENTE DE WHATSAPP */
-        .whatsapp-float {
+        /* ARQUITECTURA DEL MENÚ FLOTANTE MULTIREDES (DENTRO DEL BOTÓN DE REDES) */
+        .social-float-container {
             position: fixed;
-            width: 60px;
-            height: 60px;
             bottom: 30px;
             right: 30px;
-            background-color: #25d366;
-            color: #fff;
-            border-radius: 50px;
-            text-align: center;
-            font-size: 35px;
-            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
-            z-index: 1000;
+            z-index: 9999;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        /* Estilo base común de los sub-botones ocultos */
+        .social-float-item {
+            width: 48px;
+            height: 48px;
+            border-radius: 50%;
             display: flex;
             justify-content: center;
             align-items: center;
-            transition: all 0.3s ease;
+            color: #fff;
+            font-size: 22px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.25);
+            margin-bottom: 15px;
+            opacity: 0;
+            transform: translateY(20px) scale(0.8);
+            pointer-events: none;
+            transition: all 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55);
             text-decoration: none;
         }
-        .whatsapp-float:hover {
-            background-color: #128c7e;
+
+        /* Colores oficiales de marca para el ecosistema flotante */
+        .float-fb { background-color: #1877F2; }
+        .float-ig { background: linear-gradient(45deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%); }
+        .float-tk { background-color: #000000; }
+        .float-wa { background-color: #25D366; }
+
+        .social-float-item:hover {
             color: #fff;
-            transform: translateY(-5px);
-            box-shadow: 0px 6px 15px rgba(37, 211, 102, 0.5);
+            transform: scale(1.1);
+            box-shadow: 0 6px 12px rgba(0,0,0,0.35);
         }
-        /* Ajuste sutil de tamaño para pantallas pequeñas de celulares */
+
+        /* Botón disparador central (Trigger) */
+        .social-float-trigger {
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            background-color: var(--azul-oceano);
+            color: #fff;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 28px;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+        .social-float-trigger:hover {
+            transform: scale(1.05);
+            background-color: #054c82;
+        }
+
+        /* Efecto Toggle cuando el contenedor se activa al pasar el mouse (o dar tap) */
+        .social-float-container:hover .social-float-item {
+            opacity: 1;
+            transform: translateY(0) scale(1);
+            pointer-events: auto;
+        }
+        
+        /* Rotación dinámica del ícono central de redes al desplegar */
+        .social-float-container:hover .social-float-trigger i {
+            transform: rotate(360px);
+            transition: transform 0.5s ease;
+        }
+
+        /* Ajuste de márgenes adaptativos para celulares */
         @media (max-width: 767px) {
-            .whatsapp-float {
-                width: 52px;
-                height: 52px;
+            .social-float-container {
                 bottom: 20px;
                 right: 20px;
-                font-size: 30px;
+            }
+            .social-float-trigger {
+                width: 54px;
+                height: 54px;
+                font-size: 24px;
+            }
+            .social-float-item {
+                width: 44px;
+                height: 44px;
+                font-size: 20px;
+                margin-bottom: 12px;
             }
         }
     </style>
 </head>
 <body>
 
-    <!-- Botón Flotante de WhatsApp Permanente -->
-    <a href="https://wa.me/525561961697?text=Hola%2C%20me%20gustar%C3%ADa%20agendar%20una%20cita" class="whatsapp-float" target="_blank" aria-label="Contacto por WhatsApp">
-        <i class="bi bi-whatsapp"></i>
-    </a>
+    <!-- MENÚ MULTIREDES FLOTANTE COMPLETO (UX OPTIMIZADA) -->
+    <div class="social-float-container">
+        <!-- Sub-botones flotantes de Redes -->
+        <a href="https://www.facebook.com/share/199etbwt7L/" target="_blank" class="social-float-item float-fb" aria-label="Facebook de Dident"><i class="bi bi-facebook"></i></a>
+        <a href="https://www.instagram.com/dident.texcoco?igsh=MTg5OXNtbWFsaG43ZA==" target="_blank" class="social-float-item float-ig" aria-label="Instagram de Dident"><i class="bi bi-instagram"></i></a>
+        <a href="https://www.tiktok.com/@dr.dianalopez0" target="_blank" class="social-float-item float-tk" aria-label="TikTok de Dident"><i class="bi bi-tiktok"></i></a>
+        <a href="https://wa.me/525561961697?text=Hola%2C%20me%20gustar%C3%ADa%20agendar%20una%20cita" target="_blank" class="social-float-item float-wa" aria-label="WhatsApp de Dident"><i class="bi bi-whatsapp"></i></a>
+        
+        <!-- Botón Disparador Central -->
+        <div class="social-float-trigger" aria-label="Desplegar canales de contacto">
+            <i class="bi bi-share-fill"></i>
+        </div>
+    </div>
 
     <!-- Navbar con comportamiento Sticky -->
     <nav class="navbar navbar-expand-lg navbar-custom shadow sticky-top">
@@ -424,7 +489,7 @@
                     <div class="col-lg-6">
                         <div class="p-3 bg-white rounded-3 shadow-sm h-100">
                             <h4 class="h6 fw-bold text-secondary mb-3"><i class="bi bi-google me-1"></i> Google & <i class="bi bi-facebook me-1"></i> Facebook</h4>
-                            <!-- NUEVA Integración de Trustindex con Google y Facebook de la PC -->
+                            <!-- Integración de Trustindex -->
                             <script defer async src='https://cdn.trustindex.io/loader.js?1b8c89e746215115067621742ca'></script>
                         </div>
                     </div>
@@ -497,7 +562,7 @@
     <footer class="py-4 text-center" style="background-color: var(--azul-oceano);">
         <div class="container">
             <div class="mb-3 d-flex justify-content-center align-items-center gap-4">
-                <a href="https://www.facebook.com/share/199etbwt7L/" target="_blank" class="social-link fs-3" style="color: var(--azul-claro);" aria-label="Facebook de Dident"><i class="bi bi-facebook"></i></a>
+                <a href="https://www.facebook.com/share/199etbwt7L/" target="_blank" class="social-link fs-3" style="color: var(--azul-claro Rama);" aria-label="Facebook de Dident"><i class="bi bi-facebook"></i></a>
                 <a href="https://www.instagram.com/dident.texcoco?igsh=MTg5OXNtbWFsaG43ZA==" target="_blank" class="social-link fs-3" style="color: var(--azul-claro);" aria-label="Instagram de Dident"><i class="bi bi-instagram"></i></a>
                 <a href="https://www.tiktok.com/@dr.dianalopez0" target="_blank" class="social-link fs-3" style="color: var(--azul-claro);" aria-label="TikTok de Dident"><i class="bi bi-tiktok"></i></a>
                 <a href="https://www.doctoralia.com.mx/diana-lopez-escamilla/dentista-odontologo/texcoco" target="_blank" class="social-link icon-doctoralia text-decoration-none" style="color: var(--azul-claro);" aria-label="Doctoralia de la Dra. Diana López">dͺ</a>
