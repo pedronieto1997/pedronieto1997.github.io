@@ -5,11 +5,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Dident Texcoco | Consultorio Dental</title>
     
-    <!-- Icono de la pestaña (Favicon) -->
     <link rel="icon" type="image/png" href="./Logo_dident.png">
     <link class="apple-touch-icon" href="./Logo_dident.png">
     
-    <!-- Meta etiquetas para SEO y Redes Sociales -->
     <meta name="description" content="Cuidado dental integral y profesional en Texcoco. Agenda tu cita hoy mismo con la Dra. Diana López.">
     <meta property="og:title" content="Dident Texcoco | Consultorio Dental">
     <meta property="og:description" content="Tu sonrisa en las mejores manos. Odontología general, estética y ortodoncia con la Dra. Diana López.">
@@ -17,7 +15,6 @@
     <meta property="og:image:type" content="image/png">
     <meta property="og:url" content="https://www.dident.mx">
 
-    <!-- Bootstrap 5 & Icons -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.0/font/bootstrap-icons.css">
     
@@ -334,7 +331,6 @@
 </head>
 <body>
 
-    <!-- MENÚ MULTIREDES FLOTANTE ESQUINA INFERIOR -->
     <div class="social-float-container">
         <a href="https://www.facebook.com/share/199etbwt7L/" target="_blank" class="social-float-item float-fb" aria-label="Facebook de Dident"><i class="bi bi-facebook"></i></a>
         <a href="https://www.instagram.com/dident.texcoco?igsh=MTg5OXNtbWFsaG43ZA==" target="_blank" class="social-float-item float-ig" aria-label="Instagram de Dident"><i class="bi bi-instagram"></i></a>
@@ -345,7 +341,6 @@
         </div>
     </div>
 
-    <!-- Navbar Principal con Soporte Offcanvas integrado -->
     <nav class="navbar navbar-expand-lg navbar-custom shadow sticky-top">
         <div class="container">
             <a class="navbar-brand py-0" href="#inicio">
@@ -370,7 +365,6 @@
         </div>
     </nav>
 
-    <!-- PANEL MENU LATERAL (OFFCANVAS RESPONSIVO PARA CELULARES) -->
     <div class="offcanvas offcanvas-start offcanvas-custom" tabindex="-1" id="menuLateralDident" aria-labelledby="menuLateralDidentLabel">
         <div class="offcanvas-header justify-content-between align-items-center border-bottom border-secondary-subtle py-3">
             <img src="./Logo_principal.png" alt="Dident Logo Menú" style="height: 50px; width: auto; object-fit: contain;">
@@ -402,7 +396,6 @@
         </div>
     </div>
 
-    <!-- Carrusel Publicitario -->
     <div id="carouselPublicidad" class="carousel slide carousel-custom shadow-sm" data-bs-ride="carousel">
         <div class="carousel-indicators">
             <button type="button" data-bs-target="#carouselPublicidad" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
@@ -459,7 +452,6 @@
     </div>
 
     <main>
-        <!-- Hero Section -->
         <header class="hero-section text-center">
             <div class="container">
                 <h1 class="display-4 fw-bold mb-3">Tu sonrisa en las mejores manos</h1>
@@ -470,7 +462,6 @@
             </div>
         </header>
 
-        <!-- Sección de Servicios -->
         <section id="servicios" class="py-5">
             <div class="container text-center py-3">
                 <h2 class="fw-bold mb-2" style="color: var(--azul-oceano) !important;">Nuestros Servicios</h2>
@@ -480,7 +471,7 @@
                         <div class="card h-100 border-0 shadow-sm p-4 card-service">
                             <div class="mb-3 icon-azul"><i class="bi bi-shield-plus display-5"></i></div>
                             <h3 class="h5 card-title fw-bold" style="color: var(--azul-oceano);">Odontología General</h3>
-                            <p class="card-text text-muted">Limpiezas profundas, resinas estéticas y tratamientos de prevención para mantener tu mouth completamente sana.</p>
+                            <p class="card-text text-muted">Limpiezas profundas, resinas estéticas y tratamientos de prevención para mantener tu boca completamente sana.</p>
                         </div>
                     </div>
                     <div class="col-md-6 col-lg-4">
@@ -522,7 +513,6 @@
             </div>
         </section>
 
-        <!-- SECCIÓN DE RESEÑAS PERMANENTE Y GRATUITA -->
         <section id="opiniones" class="py-5" style="background-color: #f1f3f5;">
             <div class="container py-3 text-center">
                 <h2 class="fw-bold mb-2" style="color: var(--azul-oceano);">Opiniones de nuestros pacientes</h2>
@@ -530,10 +520,94 @@
                 
                 <div class="row g-4 justify-content-center align-items-stretch">
                     <div class="col-lg-6">
-                        <div class="p-3 bg-white rounded-3 shadow-sm h-100">
-                            <h4 class="h6 fw-bold text-secondary mb-3"><i class="bi bi-google me-1"></i> Reseñas de Google Maps</h4>
-                            <!-- NUEVO SCRIPT PLAN GRATUITO PERMANENTE DE GOOGLE -->
-                            <script defer async src='https://cdn.trustindex.io/loader.js?066c1b67518b425431966b0701b'></script>
+                        <div id="carouselTestimonios" class="carousel slide shadow-sm rounded-4 bg-white p-4 h-100 d-flex flex-column justify-content-between" data-bs-ride="carousel" style="border: 1px solid #eef2f5;">
+                            
+                            <div class="d-flex justify-content-between align-items-center mb-4 pb-3 border-bottom w-100">
+                                <div class="text-start">
+                                    <h5 class="fw-bold mb-1 text-dark" style="font-size: 1.1rem;">Opiniones Verificadas</h5>
+                                    <div class="d-flex align-items-center gap-2">
+                                        <span class="fw-bold text-warning" style="font-size: 1.05rem;">5.0</span>
+                                        <div class="text-warning d-flex gap-0.5">
+                                            <i class="bi bi-star-fill" style="font-size: 0.85rem;"></i>
+                                            <i class="bi bi-star-fill" style="font-size: 0.85rem;"></i>
+                                            <i class="bi bi-star-fill" style="font-size: 0.85rem;"></i>
+                                            <i class="bi bi-star-fill" style="font-size: 0.85rem;"></i>
+                                            <i class="bi bi-star-fill" style="font-size: 0.85rem;"></i>
+                                        </div>
+                                        <small class="text-muted" style="font-size: 0.8rem;">Excelencia médica</small>
+                                    </div>
+                                </div>
+                                <span class="badge bg-success-subtle text-success border border-success-subtle px-2 py-1.5 rounded-pill d-flex align-items-center gap-1" style="font-size: 0.75rem; font-weight: 500;">
+                                    <i class="bi bi-patch-check-fill"></i> Pacientes Reales
+                                </span>
+                            </div>
+
+                            <div class="carousel-inner flex-grow-1 d-flex align-items-center">
+                                
+                                <div class="carousel-item active">
+                                    <div class="d-flex align-items-center gap-3 mb-3 text-start w-100">
+                                        <div class="rounded-circle bg-info text-white d-flex align-items-center justify-content-center fw-bold" style="width: 42px; height: 42px; font-size: 0.95rem;">MR</div>
+                                        <div>
+                                            <h6 class="fw-bold mb-0 text-dark" style="font-size: 0.95rem;">Marisol Robledo</h6>
+                                            <small class="text-muted" style="font-size: 0.75rem;">Google Maps</small>
+                                        </div>
+                                        <i class="bi bi-google text-primary ms-auto" style="font-size: 1.2rem;"></i>
+                                    </div>
+                                    <p class="text-secondary mb-3" style="font-size: 0.88rem; line-height: 1.6; text-align: left; min-height: 75px;">
+                                        "Atención excelente... La doctora Diana es muy empática y explica muy bien aclarando todas las dudas ... 🥰"
+                                    </p>
+                                </div>
+
+                                <div class="carousel-item">
+                                    <div class="d-flex align-items-center gap-3 mb-3 text-start w-100">
+                                        <div class="rounded-circle bg-success text-white d-flex align-items-center justify-content-center fw-bold" style="width: 42px; height: 42px; font-size: 0.95rem; background-color: #198754 !important;">TV</div>
+                                        <div>
+                                            <h6 class="fw-bold mb-0 text-dark" style="font-size: 0.95rem;">Teresa Vázquez Guerrero</h6>
+                                            <small class="text-muted" style="font-size: 0.75rem;">Google Maps</small>
+                                        </div>
+                                        <i class="bi bi-google text-primary ms-auto" style="font-size: 1.2rem;"></i>
+                                    </div>
+                                    <p class="text-secondary mb-3" style="font-size: 0.88rem; line-height: 1.6; text-align: left; min-height: 75px;">
+                                        "Me gustó mucho, me cambié una amalgamas y el resultado fue muy bueno aparte la Dra Diana es muy amable y te explica todo con paciencia"
+                                    </p>
+                                </div>
+
+                                <div class="carousel-item">
+                                    <div class="d-flex align-items-center gap-3 mb-3 text-start w-100">
+                                        <div class="rounded-circle bg-primary text-white d-flex align-items-center justify-content-center fw-bold" style="width: 42px; height: 42px; font-size: 0.95rem; background-color: #0d6efd !important;">AG</div>
+                                        <div>
+                                            <h6 class="fw-bold mb-0 text-dark" style="font-size: 0.95rem;">Athzyri Karen García Barbosa</h6>
+                                            <small class="text-muted" style="font-size: 0.75rem;">Google Maps</small>
+                                        </div>
+                                        <i class="bi bi-google text-primary ms-auto" style="font-size: 1.2rem;"></i>
+                                    </div>
+                                    <p class="text-secondary mb-3" style="font-size: 0.88rem; line-height: 1.6; text-align: left; min-height: 75px;">
+                                        "Muy buena clínica, la doctora Diana es muy buena. Aparte te genera facturas para que te sean deducibles en tu declaración anual :D ..."
+                                    </p>
+                                </div>
+
+                                <div class="carousel-item">
+                                    <div class="d-flex align-items-center gap-3 mb-3 text-start w-100">
+                                        <div class="rounded-circle text-white d-flex align-items-center justify-content-center fw-bold" style="width: 42px; height: 42px; font-size: 0.95rem; background-color: #6f42c1;">EY</div>
+                                        <div>
+                                            <h6 class="fw-bold mb-0 text-dark" style="font-size: 0.95rem;">Eduardo Yo</h6>
+                                            <small class="text-muted" style="font-size: 0.75rem;">Google Maps</small>
+                                        </div>
+                                        <i class="bi bi-google text-primary ms-auto" style="font-size: 1.2rem;"></i>
+                                    </div>
+                                    <p class="text-secondary mb-3" style="font-size: 0.88rem; line-height: 1.6; text-align: left; min-height: 75px;">
+                                        "Excelente experiencia. La atención fue impecable desde el primer momento. La doctora es muy profesional, transmite confianza y explica cada procedimiento de forma clara..."
+                                    </p>
+                                </div>
+
+                            </div>
+
+                            <div class="carousel-indicators" style="position: relative; margin-bottom: 0; margin-top: 15px;">
+                                <button type="button" data-bs-target="#carouselTestimonios" data-bs-slide-to="0" class="active" style="background-color: #adb5bd; width: 7px; height: 7px; border-radius: 50%;"></button>
+                                <button type="button" data-bs-target="#carouselTestimonios" data-bs-slide-to="1" style="background-color: #adb5bd; width: 7px; height: 7px; border-radius: 50%;"></button>
+                                <button type="button" data-bs-target="#carouselTestimonios" data-bs-slide-to="2" style="background-color: #adb5bd; width: 7px; height: 7px; border-radius: 50%;"></button>
+                                <button type="button" data-bs-target="#carouselTestimonios" data-bs-slide-to="3" style="background-color: #adb5bd; width: 7px; height: 7px; border-radius: 50%;"></button>
+                            </div>
                         </div>
                     </div>
                     
@@ -550,7 +624,6 @@
             </div>
         </section>
 
-        <!-- Sección de Ubicación y Contacto -->
         <section id="ubicacion" class="py-5 bg-white">
             <div class="container py-3">
                 <div class="row g-5">
@@ -596,7 +669,6 @@
         </section>
     </main>
 
-    <!-- Barra Inferior (Footer) -->
     <footer class="py-4 text-center" style="background-color: var(--azul-oceano);">
         <div class="container">
             <div class="mb-3 d-flex justify-content-center align-items-center gap-4">
